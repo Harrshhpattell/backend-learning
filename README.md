@@ -1,24 +1,25 @@
-// powershall  
-// Get-ExecutionPolicy  
-// Set-ExecutionPolicy RemoteSigned
+```
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config.env" });
+const app = require("./app");
 
-// after work  
-// Set-ExecutionPolicy Restricted
+// console.log(app.get("env"));
+// development
+// console.log(process.env);
 
-// 200- ok  
-// 201- created  
-// 404- Not Found  
-// 204- no content  
-// 500 - internal server error
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log(`app running on port ${port}...`);
+});
 
-### basic branch
+// environment variable
+// npm i dotenv
+// NODE_ENV=development nodemon server.js or create(extension=Dotenv) config.env file
+```
 
-in the basic branch how api works with defferent different http status code.
+### v4 branch
 
-### v2 branch
-
-in the v2 branch use `route` to refactor code
-
-### v3 branch
-
-creating and mounting multiple routers (use middleware for tour and user path)
+refactoring code by dividing file (routes,controllers)  
+learned how exports and module.exports work and then  
+learned custom middleware by checking id and last  
+learned enviroment variable
