@@ -10,6 +10,7 @@
 // 404- Not Found  
 // 204- no content  
 // 500 - internal server error
+// 400 - bad request
 
 ### basic branch
 
@@ -56,3 +57,8 @@ modilfying config.exe file
 installing npm i mongoose  
 making schema and model  
 insert first data to database
+
+### v6 branch
+
+Learned MVC architechture  
+create and update api working with mongodb
