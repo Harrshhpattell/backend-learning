@@ -135,28 +135,18 @@ const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/data/tours-simple.json`)
 );
 
-// app.get("/api/v1/tours", getAllTours);
-// app.get("/api/v1/tours/:id", getTour);
-// app.post("/api/v1/tours", createTour);
-// app.patch("/api/v1/tours/:id", updateTour);
-// app.delete("/api/v1/tours/:id", deleteTour);
-
 // 3) Route
 
-app.route("/api/v1/tours").get(getAllTours).post(createTour);
-app
-  .route("/api/v1/tours/:id")
-  .get(getTour)
-  .patch(updateTour)
-  .delete(deleteTour);
+const tourRouter = express.Router();
+const UserRouter = express.Router();
+tourRouter.route("/").get(getAllTours).post(createTour);
+tourRouter.route("/:id").get(getTour).patch(updateTour).delete(deleteTour);
 
-app.route("/api/v1/users").get(getAllUsers).post(creatUser);
-app
-  .route("/api/v1/users/:id")
-  .get(getUser)
-  .patch(updateUser)
-  .delete(deleteUser);
+UserRouter.route("/").get(getAllUsers).post(creatUser);
+UserRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser);
 
+app.use("/api/v1/tours", tourRouter);
+app.use("/api/v1/users", userRouter);
 //   4) Server
 
 const port = 3000;
