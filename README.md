@@ -48,3 +48,11 @@ app.listen(port, () => {
 // npm i dotenv
 // NODE_ENV=development nodemon server.js or create(extension=Dotenv) config.env file
 ```
+
+### v5 branch
+
+connecting mongodb(Atlas) to our project  
+modilfying config.exe file  
+installing npm i mongoose  
+making schema and model  
+insert first data to database
