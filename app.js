@@ -138,12 +138,12 @@ const tours = JSON.parse(
 // 3) Route
 
 const tourRouter = express.Router();
-const UserRouter = express.Router();
+const userRouter = express.Router();
 tourRouter.route("/").get(getAllTours).post(createTour);
 tourRouter.route("/:id").get(getTour).patch(updateTour).delete(deleteTour);
 
-UserRouter.route("/").get(getAllUsers).post(creatUser);
-UserRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser);
+userRouter.route("/").get(getAllUsers).post(creatUser);
+userRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser);
 
 app.use("/api/v1/tours", tourRouter);
 app.use("/api/v1/users", userRouter);
