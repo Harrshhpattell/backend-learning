@@ -9,6 +9,7 @@
 // 201- created   
 // 404- Not Found   
 // 204- no content   
+// 500 - internal server error     
 
 ### basic branch
 in the basic branch how api works with defferent different http status code.
