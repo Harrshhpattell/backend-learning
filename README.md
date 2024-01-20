@@ -61,4 +61,4 @@ insert first data to database
 ### v6 branch
 
 Learned MVC architechture  
-create and getTours api working with mongodb
+CRUD operation
