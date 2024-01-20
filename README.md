@@ -9,7 +9,7 @@
 // 201- created  
 // 404- Not Found  
 // 204- no content  
-// 500 - internal server error
+// 500 - internal server error  
 // 400 - bad request
 
 ### basic branch
@@ -61,4 +61,4 @@ insert first data to database
 ### v6 branch
 
 Learned MVC architechture  
-create and update api working with mongodb
+create and getTours api working with mongodb
