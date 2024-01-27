@@ -61,4 +61,5 @@ insert first data to database
 ### v6 branch
 
 Learned MVC architechture  
-CRUD operation
+CRUD operation  
+created filtering, some advance filtering, sorting, limiting fields, pagination
